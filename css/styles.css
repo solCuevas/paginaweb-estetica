@@ -1,0 +1,216 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffe6f0;
+    font-family: 'poppins',sans-serif;
+    color: #5a3e4d;
+}
+header{
+    background-color: #ffcce0;
+    padding: 20px;
+    text-align: center;
+
+}
+nav a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: #a83279;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: #ff1493;
+}
+h1,h2,h3{
+    font-family: 'playfair Display',serif;
+    text-align: 15px;
+    margin-bottom: 15px;
+    color: #a83279;
+}
+/*la seccion de inicio*/
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.texto-inicio{
+    max-width: 400px;
+    text-align: center;
+}
+.texto-inicio p{
+    margin-bottom: 20px;
+    font-size: 16px;
+
+}
+.boton{
+    background-color: #ff1493;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.boton:hover{
+    background-color: #c71585;
+}
+.btn-outline-danger{
+    border-color: #ff1493;
+    color: #ff1493;
+}
+.btn-outline-danger:hover{
+    background-color: #ff1493;
+    color: white;
+}
+/*imagenes*/
+.imagen-inicio img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(o,o,o,o.15);
+    transition: 0.3s;
+
+}
+.imagen-inicio img:hover{
+    transform: scale(1.05);
+}
+
+/* seccion de servicios*/
+#servicios{
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff0f5;
+
+}
+#servicios h2{
+    font-size: 32px;
+    color: #d63384;
+    margin-bottom: 40px;
+}
+/* contenedor*/
+.contenedor-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+/*las cards individual*/
+.card{
+background-color: #ffff;
+border-radius: 20px;
+box-shadow: 0px 8px 20px rgba(214,51,132,0.15);
+overflow:hidden;
+
+}
+.card img{
+
+}
+.card h3{
+    color: #c2185b;
+    margin: 15px 0 10px 0;
+    font-size: 20px;
+}
+.card p {
+    font-size:14px;
+    padding: 0 15px;
+    color:#555
+    ;
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 25px rgba(214,51,132,0.25);
+}
+/*Precios*/
+.precios{
+    text-align: center;
+    padding: 40px;
+}
+.tabla-precios{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+.item{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+/* Seccion de turnos*/
+.turnos{
+    text-align: center;
+    padding: 40px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+input, select{
+    padding: 10px;
+    width:250px;
+    border-radius: 15px;
+    border: 1px solid #ffcce0;
+
+}
+button{
+    background-color: #ff1493;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #c71585;
+}
+/*Ultimo*/
+.nosotros{
+    text-align: center;
+    padding: 50px;
+    max-width: 600px;
+    margin: auto;
+}
+.galeria{
+    display: grid;
+   grid-template-columns:repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+    
+
+}
+.galeria img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: opx 8px 20px rgba(0,0,0,0.1);
+    transition: o.3s;
+}
+.galeria img:hover{
+    transform: scale(1.05);
+}
+@media(max-width: 768px){
+    .galeria{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media(max-width:480px){
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+}
