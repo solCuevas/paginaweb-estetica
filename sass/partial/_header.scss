@@ -1,0 +1,7 @@
+@use "variables" as v;
+
+header {
+  background-color: v.$rosa-pastel;
+  padding: 20px;
+  text-align: center;
+}

@@ -1,0 +1,250 @@
+
+@use "variables" as v;
+@use "mixins" as m;
+
+/* CONDICIONAL */
+$modo: "femenino";
+
+body {
+  @if $modo == "femenino" {
+    background-color: v.$rosa-pastel;
+    color: v.$texto;
+  } @else {
+    background-color: white;
+    color: black;
+  }
+
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #a83279;
+}
+
+/* INICIO */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.texto-inicio {
+  max-width: 400px;
+  text-align: center;
+
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+/* BOTONES */
+.boton {
+  @include m.boton;
+
+  &:hover {
+    background-color: #c71585;
+  }
+}
+
+.btn-outline-danger {
+  border-color: #ff1493;
+  color: #ff1493;
+
+  &:hover {
+    background-color: #ff1493;
+    color: white;
+  }
+}
+
+/* EXTEND */
+.card-base {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* IMAGEN INICIO */
+.imagen-inicio {
+  img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* SERVICIOS */
+#servicios {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff0f5;
+
+  h2 {
+    font-size: 32px;
+    color: #d63384;
+    margin-bottom: 40px;
+  }
+}
+
+/* CARDS */
+.contenedor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  @extend .card-base;
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(214,51,132,0.15);
+  overflow: hidden;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 25px rgba(214,51,132,0.25);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    color: #c2185b;
+    margin: 15px 0 10px 0;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 0 15px;
+    color: #555;
+  }
+}
+
+/* PRECIOS */
+.precios {
+  text-align: center;
+  padding: 40px;
+
+  .tabla-precios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+    .item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 20px;
+      width: 200px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+/* TURNOS */
+.turnos {
+  padding: 40px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+
+    input,
+    select {
+      padding: 10px;
+      width: 250px;
+      border-radius: 15px;
+      border: 1px solid #ffcce0;
+    }
+
+    button {
+      @include m.boton;
+
+      &:hover {
+        background-color: #c71585;
+      }
+    }
+  }
+}
+
+/* NOSOTROS */
+.nosotros {
+  text-align: center;
+  padding: 50px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+/* ANIMACIONES */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inicio,
+.card,
+.precios,
+.turnos,
+.nosotros,
+.galeria {
+  animation: aparecer 0.8s ease;
+}

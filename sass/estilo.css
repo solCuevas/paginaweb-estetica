@@ -1,0 +1,260 @@
+header {
+  background-color: #ffe6f0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #ffe6f0;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  color: #ff1493;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #c71585;
+}
+
+/* CONDICIONAL */
+body {
+  background-color: #ffe6f0;
+  color: #5a3e4d;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #a83279;
+}
+
+/* INICIO */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.texto-inicio {
+  max-width: 400px;
+  text-align: center;
+}
+.texto-inicio p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* BOTONES */
+.boton {
+  background-color: #ff1493;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.boton:hover {
+  background-color: #c71585;
+}
+
+.btn-outline-danger {
+  border-color: #ff1493;
+  color: #ff1493;
+}
+.btn-outline-danger:hover {
+  background-color: #ff1493;
+  color: white;
+}
+
+/* EXTEND */
+.card-base, .card {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* IMAGEN INICIO */
+.imagen-inicio img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+.imagen-inicio img:hover {
+  transform: scale(1.05);
+}
+
+/* SERVICIOS */
+#servicios {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff0f5;
+}
+#servicios h2 {
+  font-size: 32px;
+  color: #d63384;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.contenedor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(214, 51, 132, 0.15);
+  overflow: hidden;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 25px rgba(214, 51, 132, 0.25);
+}
+.card img {
+  width: 100%;
+}
+.card h3 {
+  color: #c2185b;
+  margin: 15px 0 10px 0;
+  font-size: 20px;
+}
+.card p {
+  font-size: 14px;
+  padding: 0 15px;
+  color: #555;
+}
+
+/* PRECIOS */
+.precios {
+  text-align: center;
+  padding: 40px;
+}
+.precios .tabla-precios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.precios .tabla-precios .item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 200px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.precios .tabla-precios .item:hover {
+  transform: translateY(-5px);
+}
+
+/* TURNOS */
+.turnos {
+  padding: 40px;
+}
+.turnos form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.turnos form input,
+.turnos form select {
+  padding: 10px;
+  width: 250px;
+  border-radius: 15px;
+  border: 1px solid #ffcce0;
+}
+.turnos form button {
+  background-color: #ff1493;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.turnos form button:hover {
+  background-color: #c71585;
+}
+
+/* NOSOTROS */
+.nosotros {
+  text-align: center;
+  padding: 50px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+.galeria img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ANIMACIONES */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.inicio,
+.card,
+.precios,
+.turnos,
+.nosotros,
+.galeria {
+  animation: aparecer 0.8s ease;
+}
+
+footer {
+  background-color: #ff1493;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
