@@ -195,7 +195,7 @@ h1, h2, h3 {
 .nosotros {
   text-align: center;
   padding: 50px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -205,9 +205,11 @@ h1, h2, h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 30px;
+  justify-content: center;
 
   img {
     width: 250px;
+    max-width: 250;
     height: 250px;
     object-fit: cover;
     border-radius: 20px;
